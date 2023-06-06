@@ -1,3 +1,5 @@
+##Este programa recibe 3 numeros e indica cual es el menor
+
 num1 = int(input('Ingrese el primer valor: '))
 num2 = int(input('Ingrese el segundo valor: '))
 num3 = int(input('Ingrese el tercer valor: '))
