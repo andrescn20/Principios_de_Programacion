@@ -1,10 +1,21 @@
 
 # importing the required module
 import matplotlib.pyplot as plt
+import datetime 
+
+bitacora = open('bitacora_hormigas.txt' , 'w')
+bitacora.write('------------------------------------\n')
+fecha = datetime.datetime.now()
+bitacora.write(f'Fecha de Estudio: {fecha}\n')
+
 
 ##Definimos los meses que se van a estudiar y la población al inicio del estudio
 meses_de_estudio = int(input('Ingrese la cantidad de meses a estudiar: '))
-poblacion_inicial = int(input('Ingrese la población actual: '))
+poblacion_inicial = int(input('Ingrese la poblacion actual: '))
+
+bitacora.write(f'Meses de estudio: {meses_de_estudio}\n')
+bitacora.write(f'Poblacion al inicio del estudio: {poblacion_inicial}\n')
+
 
 ##Para los ejes:
 x = []
@@ -34,9 +45,15 @@ for mes in range(1, meses_de_estudio+1):
         poblacion_final = poblacion_final - 7000
     x.append(mes)
     y.append(round(poblacion_final))
-    
-print(f'Eje x: {x}')
-print(f'Eje y: {y}')
+
+poblacion_final = round(poblacion_final)
+
+bitacora.write(f'Poblacion al final del estudio: {poblacion_final}\n')
+
+bitacora.write(f'Datos ejes coordenados de grafica de Poblacion\n')
+bitacora.write(f'Eje x: {x} \n')
+bitacora.write(f'Eje y: {y}\n')
+bitacora.write('FIN DEL ESTUDIO\n')
 
 # plotting the points 
 plt.plot(x, y)
@@ -50,7 +67,7 @@ plt.ylabel('Población')
 plt.title('Población Mensual de Hormigas')
   
 # function to show the plot
-plt.show()
+# plt.show()
+plt.savefig("hormigas.jpg")
 
-poblacion_final = round(poblacion_final)
-print(f'La poblacion al final de {meses_de_estudio} meses es de {poblacion_final}')
+bitacora.close()
