@@ -1,9 +1,0 @@
-------------------------------------
-Fecha de Estudio: 2023-07-27 16:21:59.445034
-Meses de estudio: 10
-Poblacion al inicio del estudio: 30000
-Poblacion al final del estudio: 133009
-Datos ejes coordenados de grafica de Poblacion
-Eje x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
-Eje y: [32300, 35313, 39260, 44431, 51204, 60077, 71701, 86929, 106877, 133009]
-FIN DEL ESTUDIO
